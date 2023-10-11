@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Traders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset default styles */
+        body, h1, h2, h3, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /* Global styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /*styles for the logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #009688;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #fff;
+            text-decoration: none;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #1E3A56;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 100;
+            font-size: large;
+        }
+
+        nav ul li a:hover {
+            color: #151415;
+            text-shadow: 0 0 10px #FFF;
+        }
+
+        nav ul li:first-child {
+            margin-left: auto;
+        }
+
+        .contact-details-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 80px);
+            background-image: url("https://img.freepik.com/free-photo/closeup-view-pharmacist-hand-taking-medicine-box-from-shelf-drug-store_342744-320.jpg?w=900&t=st=1696856561~exp=1696857161~hmac=a09b980b20899d525e974ec5ff5c859acfb98c0a21be7f6d9be108efdbd9e51c");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .contact-details {
+            background-color: #EAF4F7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px #1E3A56; /* Added blue box shadow */
+            max-width: 600px;
+            text-align: center;
+            margin: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .contact-details h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-details p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .contact-details strong {
+            color: #555;
+        }
+
+        .contact-details .btn {
+            background-color: #233943;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+            box-shadow: 0 0 10px #A6C2E2;
+            padding: 10px 20px;
+            display: block;
+            margin: 10px auto;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .contact-details .btn:hover {
+            background-color: #6F868E;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #1E3A56;
+            color: #ccc;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo-container {
+                justify-content: center;
+            }
+
+            .logo {
+                width: 40px;
+                height: 40px;
+                margin-right: 0;
+            }
+
+            .logo-text {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <div class="logo">
+                        <img src="https://m.media-amazon.com/images/I/41pXK0Zw3sL.jpg" alt="General Traders Logo">
+                    </div>
+                    <a href="#" class="logo-text">General Traders</a>
+                </div>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contact-details-container">
+        <div class="contact-details">
+            <h2>Contact Details</h2>
+            <p><strong>Head Office:</strong><br>
+                <strong>GENERAL TRADERS</strong><br> 
+                MEDICAL SUPPLIES- ATTAPUR<br>
+                # 2-6-1/1/43, Heera Nagar Colony<br>
+                Pillar No. 208, Upperpally, Rajendranagar,<br>
+                Hyderabad-500048. Telangana-India<br>
+                Phone: +91 9966654434</p>
+            <p><strong>Branch Office:</strong><br>
+                # 5-9-322/1, LG-Shop No. 20, Jamia Nizamia Complex,<br>
+                Gunfoundry, Abids, Opposite SBI bank<br>
+                Hyderabad-500001.Telangana-India</p>
+            <p><strong>General Manager:</strong><br>
+                S. M. Ali<br>
+                Cell: +91 9849789368<br>
+                Email: makali0812@yahoo.co.in</p>
+            <h2>More Details</h2>
+            <p>For more information or to inquire further, please fill out the form:</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGzACJxSsXKxemaWrBqY-aoj73AMkBTOy8pvPFL4FgyTVcdQ/viewform?usp=pp_url" class="btn">Fill Out the Form</a>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 General Traders. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

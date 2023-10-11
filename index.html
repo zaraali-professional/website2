@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Traders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset default styles */
+        body, h1, h2, h3, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Global styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            position: relative;
+            background: #1E3A56;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #009688;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space between;
+            align-items: center;
+        }
+
+        /* Heading styles */
+        .heading {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url(https://images.pexels.com/photos/5910953/pexels-photo-5910953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px;
+            text-align: center;
+            height: 370px; /* Increase the height here */
+        }
+
+        .heading h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .heading p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 25px;
+            color: #151313;
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+
+        h1 {
+            color: #000; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+            position: relative; 
+            transition: text-shadow 0.3s ease; 
+        }
+
+        .highlight-text{
+            color: #000; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+            position: relative; 
+            transition: text-shadow 0.3s ease;
+
+        }
+
+        .heading .btn {
+            background-color: #041228;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 24px;
+            transition: background-color 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 150, 136, 0.7);
+            margin: 20px auto;
+        }
+
+        .heading .btn:hover {
+            background-color: #6E7B8F;
+        }
+
+        /* About section styles */
+        .about-section {
+            background-color: #F0F2F5;
+            padding: 100px 0;
+        }
+
+        .about-section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #000;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        /* Services section styles */
+        .services-section {
+            padding: 100px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .services-section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #000;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .service {
+            width: 300px;
+            margin: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            background-color: #F0F2F5;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+        }
+
+        .service img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 20px;
+        }
+
+        .service-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .service-content p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #1E3A56;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1E3A56;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
+
+            
+        }
+
+
+        .btn:hover {
+            background-color: #04AA6D;
+        }
+
+        @media (max-width: 768px) {
+            .logo-text {
+                font-size: 20px;
+            }
+
+            header {
+                padding: 10px 0;
+            }
+
+            .heading h1 {
+                font-size: 36px;
+            }
+
+            .heading p {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+
+            .heading .btn {
+                font-size: 20px;
+            }
+
+            .about-section h2 {
+                font-size: 28px;
+            }
+
+            .about-section p {
+                font-size: 16px;
+            }
+
+            .services-section h2 {
+                font-size: 28px;
+            }
+
+            .service-content h3 {
+                font-size: 20px;
+            }
+
+            .service-content p {
+                font-size: 14px;
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            /* Adjust the header image for smaller screens */
+            .heading {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <div class="logo">
+                        <img src="https://m.media-amazon.com/images/I/41pXK0Zw3sL.jpg" alt="General Traders Logo">
+                    </div>
+                    <span class="logo-text">General Traders</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="heading">
+        <div class="container">
+            <h1>GENERAL TRADERS</h1>
+            <p class ="highlight-text">MEDICAL SUPPLIES</p>
+            <a href="./products.html" class="btn">Explore Products</a>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <h2 class ="highlight-text">Our Services</h2>
+
+            <div class="services">
+                <div class="service">
+                    <div class="service-content">
+                        <h3>PRODUCT LINE</h3>
+                        <p class ="highlight-text">Wide range of medical, surgical, hospitality equipment, and other general products.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="service-content">
+                        <h3>VISION</h3>
+                        <p class ="highlight-text">General Traders is committed to excellence and customer satisfaction. We aim to be the best in the industry.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="service-content">
+                        <h3>MISSION</h3>
+                        <p class ="highlight-text">Our mission is to deliver superior quality products at affordable prices to meet the current needs of society.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <h2 class ="highlight-text">About Us</h2>
+            <p>General Traders is a multi-dimensional commercial house of Hyderabad-Telangana involved in sales, retail and wholesale shops and institution supplies in the government and private sector businesses. We are a leading provider of surgical solutions, dedicated to delivering exceptional products and services to healthcare professionals and patients. With a focus on innovation, quality, and safety, we offer a wide range of surgical instruments, equipment, and supplies that meet the highest standards in the industry.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 General Traders. All rights reserved.<p>
+        </div>
+    </footer>
+</body>
+</html>
